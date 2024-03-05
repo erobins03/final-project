@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+<body>
+    <header>
+        <h1>Result</h1>
+        <p>Breed: {{ breed }}</p>
+    </header>
+<!--    {% block in %}-->
+    {% if image_data and image_data["status"] == "success" %}
+        <img src="{{ image_data['message'] }}" alt="Random Dog Image">
+    {% else %}
+        <p>Failed to get a random dog image.</p>
+    {% endif %}
+    <p>More Information: <a href="{{ dog_info_url }}" target="_blank">{{ dog_info_url }}</a></p>
+<!--    {% endblock %}-->
+</body>
+{% endblock %}
