@@ -1,17 +1,23 @@
 {% extends "index.html" %}
+
+{% block header %}
+    {# Override this block to exclude the header in results.html #}
+{% endblock %}
+
 {% block content %}
 <body>
-    <header>
-        <h1>Result</h1>
-        <p>Breed: {{ breed }}</p>
-    </header>
-<!--    {% block in %}-->
-    {% if image_data and image_data["status"] == "success" %}
-        <img src="{{ image_data['message'] }}" alt="Random Dog Image">
-    {% else %}
-        <p>Failed to get a random dog image.</p>
-    {% endif %}
-    <p>More Information: <a href="{{ dog_info_url }}" target="_blank">{{ dog_info_url }}</a></p>
-<!--    {% endblock %}-->
+    <button class='goofy-button' onclick="history.back()">Go Back</button>
+        <div class="image-container">
+            {% if success %}
+                <h1>{{ breed }}</h1>
+                <img src="{{ image_data['message'] }}" alt="Random Dog Image" class="custom-image">
+                <p class="image-caption"> Here is some more information about a {{ breed }}: <a href="{{ dog_info_url }}" target="_blank" >{{ dog_info_url }}</a></p>
+            {% else %}
+                <h2>Failed to get specific random dog image. Here is a random dog photo instead:</h2>
+                <img src="{{ image_data['message'] }}" alt="Random Dog Image" class="custom-image">
+            {% endif %}
+        </div>
+    <img src="https://static.vecteezy.com/system/resources/previews/014/455/901/non_2x/transparent-dog-paw-icon-transparent-background-free-png.png" alt="paw">
+    <img src="https://static.vecteezy.com/system/resources/previews/014/455/901/non_2x/transparent-dog-paw-icon-transparent-background-free-png.png" alt="paw">
 </body>
 {% endblock %}

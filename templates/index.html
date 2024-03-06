@@ -7,17 +7,22 @@
     </head>
 
     <body>
-        <header>
-            <h1>Only Dogs</h1>
-        </header>
+        {% block header %}
+            <header>
+                <h1>Only Dogs</h1>
+                <h2>Are you wondering what a specific type of breed looks like? Type in a dog breed</h2>
+            </header>
+        {% endblock %}
+
         {% block content %}
-        <form action="/results" method="POST">
+        <div class = "form-class">
+            <form action="/results" method="POST">
             <label for="breed">Enter a dog breed:</label>
             <input type="text" id="breed" name="breed">
             <button type="submit">Fetch</button>
-        </form>
+            </form>
+        </div>
     </body>
-
 </html>
 {% endblock %}
 
