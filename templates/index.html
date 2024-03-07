@@ -11,7 +11,7 @@
         {% block header %}
             <header>
                 <h1>Only Dogs</h1>
-                <h2>Are you wondering what a specific type of breed looks like? Type in a dog breed</h2>
+                <h2>Are you wondering what a certain dog breed looks like?</h2>
             </header>
         {% endblock %}
 
@@ -27,6 +27,10 @@
         <div class="home-page-images">
         <img src="https://static.vecteezy.com/system/resources/previews/014/455/901/non_2x/transparent-dog-paw-icon-transparent-background-free-png.png" alt="paw" class="image-size">
         <img src="https://static.vecteezy.com/system/resources/previews/014/455/901/non_2x/transparent-dog-paw-icon-transparent-background-free-png.png" alt="paw" class="image2-size">
+        </div>
+
+        <div class="image">
+            <img src="{{url_for('static', filename='ziva.png')}}" alt="My Photo">
         </div>
     </body>
 
