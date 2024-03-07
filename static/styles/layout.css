@@ -20,6 +20,11 @@ h2 {
     margin-bottom: 15px;
 }
 
+p {
+    font-size: 37px;
+    font-family: Monaco;
+}
+
 button {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -125,4 +130,17 @@ a:hover {
     height: auto;
     transform: rotate(deg);
     float: right;
+}
+
+.image {
+    text-align: center;
+    margin-top: 180px;
+}
+
+.image img {
+    max-width: 500px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.1);
 }

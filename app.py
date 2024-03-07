@@ -10,7 +10,7 @@ def index():
 @app.route("/results", methods=["GET", "POST"])
 def results():
     if request.method == "POST":
-        breed = request.form["breed"]
+        breed = request.form["breed"].lower()
         image_data = get_dog_photo(breed)
         if image_data is None:
             random_image_data = get_url("https://dog.ceo/api/breeds/image/random")
