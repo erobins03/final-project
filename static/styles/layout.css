@@ -12,6 +12,13 @@ h2 {
     font-size: 20px;
 }
 
+h3 {
+    color: black;
+    text-align: center;
+    font-family: Lucida Grande;
+    font-size: 15px;
+}
+
 .image-container h1 {
     color: black;
     text-align: center;
@@ -138,7 +145,7 @@ a:hover {
 }
 
 .image img {
-    max-width: 500px;
+    max-width: 450px;
     height: auto;
     border: 1px solid black;
     border-radius: 25px;
